@@ -25,3 +25,35 @@ ng generate component home-details
 ng generate component graph
 ng generate component query
 
+HOME COMPOMENT HTML
+
+
+<div *ngIf="home">
+    <div>
+      <button (click)="homeClick()">Home</button>
+      <button (click)="graphClick()">Graph</button>
+      <button (click)="queryClick()">Query</button>
+    </div>
+    <div *ngFor="let item of times">
+      <app-home-details (shares)="add()"></app-home-details>
+    </div>
+  </div>
+  <div *ngIf="graph">
+    <div>
+      <button (click)="homeClick()">Home</button>
+      <button (click)="graphClick()">Graph</button>
+      <button (click)="queryClick()">Query</button>
+    </div>
+    <app-graph></app-graph>
+  </div>
+  <div *ngIf="query">
+    <div>
+      <button (click)="homeClick()">Home</button>
+      <button (click)="graphClick()">Graph</button>
+      <button (click)="queryClick()">Query</button>
+    </div>
+    <app-query></app-query>
+  </div>
+  
+
+
