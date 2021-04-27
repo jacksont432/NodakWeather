@@ -18,5 +18,10 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 })
 export class AppModule { }
 
+COMMANDS YOU NEED TO DO:
 
+ng generate component home
+ng generate component home-details
+ng generate component graph
+ng generate component query
 
