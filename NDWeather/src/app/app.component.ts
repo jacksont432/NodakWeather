@@ -1,56 +1,10 @@
-import { Component, OnInit } from '@angular/core';
+import { Component } from '@angular/core';
 
 @Component({
-  selector: 'app-home',
-  templateUrl: './home.component.html',
-  styleUrls: ['./home.component.css']
+  selector: 'app-root',
+  templateUrl: './app.component.html',
+  styleUrls: ['./app.component.css']
 })
-export class HomeComponent implements OnInit {
-
-  home: boolean = true;
-  query: boolean = false;
-  graph: boolean = false;
-  times: number[] = [1];
-
-  homeClick(): void {
-    this.home = !this.home;
-    if(this.home == false && this.graph == false && this.query == false) {
-      this.home = true;
-    }
-    else {
-      this.query = false;
-      this.graph = false;
-    }
-  }
-
-  queryClick(): void {
-    this.query = !this.query;
-    if(this.query == false && this.graph == false && this.home == false) {
-      this.query = true;
-    }
-    else {
-      this.home = false;
-      this.graph = false;
-    }
-  }
-
-  graphClick(): void {
-    this.graph = !this.graph;
-    if(this.graph == false && this.query == false && this.home == false) {
-      this.graph = true;
-    }
-    else {
-      this.home = false;
-      this.query = false;
-    }
-  }
-  constructor() { }
-
-  ngOnInit() {
-  }
-
-  add(): void {
-    this.times.push(2);
-  }
-
+export class AppComponent {
+  title = 'NDWeather';
 }

@@ -1,3 +1,4 @@
+
 import { Component, OnInit } from '@angular/core';
 
 @Component({
@@ -7,9 +8,50 @@ import { Component, OnInit } from '@angular/core';
 })
 export class HomeComponent implements OnInit {
 
+  home: boolean = true;
+  query: boolean = false;
+  graph: boolean = false;
+  times: number[] = [1];
+
+  homeClick(): void {
+    this.home = !this.home;
+    if(this.home == false && this.graph == false && this.query == false) {
+      this.home = true;
+    }
+    else {
+      this.query = false;
+      this.graph = false;
+    }
+  }
+
+  queryClick(): void {
+    this.query = !this.query;
+    if(this.query == false && this.graph == false && this.home == false) {
+      this.query = true;
+    }
+    else {
+      this.home = false;
+      this.graph = false;
+    }
+  }
+
+  graphClick(): void {
+    this.graph = !this.graph;
+    if(this.graph == false && this.query == false && this.home == false) {
+      this.graph = true;
+    }
+    else {
+      this.home = false;
+      this.query = false;
+    }
+  }
   constructor() { }
 
-  ngOnInit(): void {
+  ngOnInit() {
+  }
+
+  add(): void {
+    this.times.push(2);
   }
 
 }
