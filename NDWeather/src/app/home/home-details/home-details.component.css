@@ -1,8 +1,35 @@
-.example-card {
-    max-width: 25rem;
-  }
-  
-  .example-header-image {
-    background-image: url('../../../assets/bison.jpg');
-    background-size:contain;
-  }
+.team-card-holder{
+  display:flex;
+
+  flex-wrap: wrap;
+
+  justify-content: center;
+  flex-direction: row;
+  max-width: 100%;
+}
+
+.team-card {
+  max-width: 20rem;
+  padding: 2rem;
+  margin: 2rem;
+}
+
+.team-header-image {
+  background-image: url('../../../assets/bison.jpg');
+  background-size:contain;
+}
+
+.team-title-holder{
+  align-content: center;
+}
+
+.team-title{
+  text-align: center;
+  max-width: 100rem;
+  padding: 2rem;
+  margin: 5rem;
+  font-size:5rem;
+}
+
+
+
