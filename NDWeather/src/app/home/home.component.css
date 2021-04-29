@@ -1,4 +1,41 @@
+.page{
+  background-color:white;
+}
+
 .example-button-row button,
 .example-button-row a {
   margin-right: 8px;
+}
+
+.menu-holder{
+  
+}
+
+.menu-title{
+  text-align: center;
+  max-width: 100%;
+  padding: 2rem;
+  font-size:5rem;
+  font-family:Arial, Helvetica, sans-serif;
+}
+
+.menu-title-subtext{
+  width:100%;
+  text-align: center;
+}
+
+.menu-button-holder{
+  display:flex;
+
+  flex-wrap: wrap;
+
+  justify-content: center;
+  flex-direction: row;
+  max-width: 100%;
+}
+
+.menu-button{
+  width:10rem;
+  height:2rem;
+  margin:1rem;
 }

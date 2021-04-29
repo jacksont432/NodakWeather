@@ -1,23 +1,31 @@
-<div class="example-button-row">
-  <h1>Nodak Weather</h1>
-  <p>
-    North Dakota's Number 1 website for retreving past weather data!
-  </p>
-</div>
-<div>
-  <button (click)="homeClick()">Home</button>
-  <button (click)="graphClick()">Graph</button>
-  <button (click)="queryClick()">Query</button>
-</div>
+<div class="page">
+  <div class="menu-holder">
 
-<div *ngIf="home">
-  <app-home-details></app-home-details>
-</div>
+    <div class="menu-title-holder">
+      <h1 class="menu-title">Nodak Weather</h1>
+      <p class="menu-title-subtext">
+        North Dakota's Number 1 website for retreving archieved weather data!
+      </p>
+    </div>
 
-<div *ngIf="graph">
-  <app-graph></app-graph>
-</div>
+    <div class="menu-button-holder">
+      <button class = "menu-button" (click)="homeClick()">Home</button>
+      <button class = "menu-button" (click)="graphClick()">Graph</button>
+      <button class = "menu-button" (click)="queryClick()">Query</button>
+    </div>
 
-<div *ngIf="query">
-  <app-query></app-query>
+  </div>
+
+  <div *ngIf="home">
+    <app-home-details></app-home-details>
+  </div>
+
+  <div *ngIf="graph">
+    <app-graph></app-graph>
+  </div>
+
+  <div *ngIf="query">
+    <app-query></app-query>
+  </div>
+  
 </div>
