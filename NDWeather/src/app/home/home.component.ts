@@ -11,7 +11,6 @@ export class HomeComponent implements OnInit {
   home: boolean = true;
   query: boolean = false;
   graph: boolean = false;
-  times: number[] = [1];
 
   homeClick(): void {
     this.home = !this.home;
@@ -48,10 +47,6 @@ export class HomeComponent implements OnInit {
   constructor() { }
 
   ngOnInit() {
-  }
-
-  add(): void {
-    this.times.push(2);
   }
 
 }

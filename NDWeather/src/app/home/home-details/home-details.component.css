@@ -1,0 +1,8 @@
+.example-card {
+    max-width: 25rem;
+  }
+  
+  .example-header-image {
+    background-image: url('../../../assets/bison.jpg');
+    background-size:contain;
+  }
