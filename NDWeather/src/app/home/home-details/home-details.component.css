@@ -15,7 +15,7 @@
   margin: 2rem;
   box-shadow: 3px 3px 10px rgba(255, 255, 255, 0.5);
   border-radius: 1rem;
-
+  border: 0.2rem outset #A4A4A4;
   font-family: 'Courier Prime', monospace;
 }
 
@@ -37,7 +37,8 @@
   margin: 2rem;
   box-shadow: 3px 3px 10px rgba(255, 255, 255, 0.5);
   border-radius: 0.6rem;
-
+  border: 0.2rem outset #A4A4A4;
+  
   font-family: 'Courier Prime', monospace;
 }
 
