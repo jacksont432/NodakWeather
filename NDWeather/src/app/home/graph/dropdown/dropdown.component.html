@@ -1,18 +1,18 @@
-<mat-form-field appearance="fill">
+<mat-form-field class="dropdown" appearance="fill">
     <mat-label>Counties</mat-label>
     <mat-select [(ngModel)]="selectedCounty" (change)=select()>
       <mat-option *ngFor="let county of countiesList" [value]="county" >{{ county }}</mat-option>
     </mat-select>
 </mat-form-field>
 
-<mat-form-field appearance="fill">
+<mat-form-field class="dropdown" appearance="fill">
   <mat-label>Weather Type</mat-label>
   <mat-select [(ngModel)]="selectedWeather" (change)=select()>
     <mat-option *ngFor="let weather of weatherList" [value]="weather" >{{ weather }}</mat-option>
   </mat-select>
 </mat-form-field>
 
-<button (click)="submit()">
+<button class="button" (click)="submit()">
   Submit
 </button>
 
