@@ -17,6 +17,9 @@
   text-align: center;
   max-width: 100%;
   padding: 2rem;
+
+  line-height:5rem;
+
   font-size:5rem;
   font-family: 'Poppins', sans-serif;
 }
