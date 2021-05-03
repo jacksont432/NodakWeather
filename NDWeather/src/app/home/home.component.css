@@ -1,5 +1,5 @@
 .page{
-  background-color:white;
+  background-color:rgb(39, 39, 39);
 }
 
 .example-button-row button,
@@ -12,6 +12,8 @@
 }
 
 .menu-title{
+  color:rgb(255, 255, 255);
+
   text-align: center;
   max-width: 100%;
   padding: 2rem;
@@ -20,6 +22,9 @@
 }
 
 .menu-title-subtext{
+
+  color:rgb(255, 255, 255);
+
   width:100%;
   text-align: center;
 }
@@ -35,7 +40,19 @@
 }
 
 .menu-button{
+  background-color: rgb(224, 224, 224);
+
   width:10rem;
   height:2rem;
   margin:1rem;
+
+  border-radius: 1rem;
+}
+
+.menu-button:hover{
+  background-color: rgb(255, 255, 255);
+  width:10rem;
+  height:2rem;
+  margin-top:0.9rem;
+  box-shadow: 2px 2px 9px rgba(255, 255, 255, 0.5);
 }

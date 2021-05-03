@@ -9,10 +9,11 @@
 }
 
 .ndweather-card {
+  background-color: rgb(224, 224, 224);
   max-width: 50rem;
   padding: 2rem;
   margin: 2rem;
-  box-shadow: 3px 3px 10px rgba(0,0,0,0.5);
+  box-shadow: 3px 3px 10px rgba(255, 255, 255, 0.5);
 }
 
 .team-card-holder{
@@ -26,10 +27,12 @@
 }
 
 .team-card {
+  background-color: rgb(224, 224, 224);
+  color:rgb(0, 0, 0);
   max-width: 20rem;
   padding: 2rem;
   margin: 2rem;
-  box-shadow: 3px 3px 10px rgba(0,0,0,0.5);
+  box-shadow: 3px 3px 10px rgba(255, 255, 255, 0.5);
 }
 
 .team-header-image {
@@ -42,6 +45,7 @@
 }
 
 .team-title{
+  color:rgb(255, 255, 255);
   text-align: center;
   max-width: 100%;
   padding: 2rem;
