@@ -1,14 +1,14 @@
 <mat-form-field appearance="fill">
-    <mat-label>Counties</mat-label>
-    <mat-select [(ngModel)]="selectedCounty" (change)=select()>
-      <mat-option *ngFor="let county of countiesList" [value]="county" >{{ county }}</mat-option>
+    <mat-label>Weather Station</mat-label>
+    <mat-select [(ngModel)]="selectedStation" (change)=select()>
+      <mat-option *ngFor="let station of stationList; let i = index" [value]="station" >{{ displayStationList[i] }}</mat-option>
     </mat-select>
 </mat-form-field>
 
 <mat-form-field appearance="fill">
   <mat-label>Weather Type</mat-label>
   <mat-select [(ngModel)]="selectedWeather" (change)=select()>
-    <mat-option *ngFor="let weather of weatherList" [value]="weather" >{{ weather }}</mat-option>
+    <mat-option *ngFor="let weather of weatherList; let i = index" [value]="weather" >{{ displayWeatherList[i] }}</mat-option>
   </mat-select>
 </mat-form-field>
 
@@ -18,7 +18,7 @@
 
 <div *ngIf = "show">
   <p>
-  {{ selectedCounty }}
+  {{ selectedStation }}
 </p>
 
 <p>

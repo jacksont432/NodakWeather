@@ -14,35 +14,59 @@ export class DropdownComponent implements OnInit {
 
   show: boolean = false;
 
-  county: string = "";
+  displayWeatherList: string [] = [
+    "Date",
+    "Precipitation",
+    "Snowfall",
+    "Temperature Average",
+    "Temperature Max",
+    "Temperature Min"
+  ]
+
+  displayStationList: string [] = [
+    "Fargo",
+    "Jamestown",
+    "Grand Forks",
+    "Williston",
+    "Bismarck",
+    "Minot",
+    "Dickinson"
+  ]
+
+  station: string = "";
   weather: string = "";
 
-  countiesList: string[] = [
-    "Cass County",
-    "Burleigh County",
-    "Grand Forks County",
-    "Ward County",
-    "Williams County",
-    "Stark County"
+  stationList: string[] = [
+    "FARGO HECTOR INTERNATIONAL AIRPORT, ND US",
+    "JAMESTOWN STATE HOSPITAL, ND US",
+    "GRAND FORKS INTERNATIONAL AIRPORT, ND US",
+    "WILLISTON EXPERIMENTAL FARM, ND US",
+    "BISMARCK MUNICIPAL AIRPORT, ND US",
+    "MINOT EXPERIMENTAL STATION, ND US",
+    "DICKINSON RANCH HQ, ND US"
   ]
 
   weatherList: string[] = [
-    "Temperature",
-    "Rainfall"
+    "DATE",
+    "PRCP",
+    "SNOW",
+    "TAVG",
+    "TMAX",
+    "TMIN"
   ]
 
-  selectedCounty: string = '';
+  selectedStation: string = '';
   
   selectedWeather: string = '';
 
 
   select() {
-    this.selectedCounty = this.county;
+    this.selectedStation = this.station;
     this.selectedWeather = this.weather;
   }
 
   submit() {
-    if(this.selectedCounty != '' && this.selectedWeather != '') {
+    if(this.selectedStation != '' && this.selectedWeather != '') {
       this.show = true;
     }
     else {
