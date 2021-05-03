@@ -1,0 +1,7 @@
+<mat-form-field appearance="fill">
+    <mat-label>Counties</mat-label>
+    <mat-select>
+      <mat-option *ngFor="let county of countiesList" [value]="county" >{{ county }}</mat-option>
+    </mat-select>
+</mat-form-field>
+
