@@ -20,17 +20,18 @@ export class DropdownComponent implements OnInit {
   weather: string = "";
 
   countiesList: string[] = [
-    "Cass County",
-    "Burleigh County",
-    "Grand Forks County",
-    "Ward County",
-    "Williams County",
-    "Stark County"
+    "FARGO HECTOR INTERNATIONAL AIRPORT, ND US",
+    "JAMESTOWN STATE HOSPITAL, ND US",
+    "GRAND FORKS INTERNATIONAL AIRPORT, ND US"
   ]
 
   weatherList: string[] = [
-    "Temperature",
-    "Rainfall"
+    "DATE",
+    "PRCP",
+    "SNOW",
+    "TAVG",
+    "TMAX",
+    "TMIN"
   ]
 
   selectedCounty: string = '';
