@@ -1,0 +1,25 @@
+.graph-card-holder{
+    display:flex;
+  
+    flex-wrap: wrap;
+  
+    justify-content: center;
+    flex-direction: row;
+    max-width: 100%;
+  }
+  
+  .graph-card {
+  
+  
+    background-color: rgb(255, 255, 255);
+    max-width: 50rem;
+    padding: 2rem;
+    margin: 2rem;
+  
+    width: 50rem;
+  
+    box-shadow: 3px 3px 10px rgba(255, 255, 255, 0.5);
+    border-radius: 1rem;
+  }
+  
+  
