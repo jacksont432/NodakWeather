@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import * as data from './testData.json';
 
 @Component({
   selector: 'app-dropdown',
@@ -11,6 +12,9 @@ export class DropdownComponent implements OnInit {
 
   ngOnInit(): void {
   }
+
+  selectedData: Weather[] = [];
+
 
   show: boolean = false;
 
@@ -71,6 +75,9 @@ export class DropdownComponent implements OnInit {
     }
     else {
       this.show = false;
+    }
+    for(let item of data) {
+      if(item.)
     }
   }
 
