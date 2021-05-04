@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { FormControl } from '@angular/forms';
+import { HttpClient } from '@angular/common/http';
 
 
 @Component({
@@ -9,10 +10,16 @@ import { FormControl } from '@angular/forms';
 })
 export class DropdownComponent implements OnInit {
 
-  constructor() { }
+  constructor(private httpClient: HttpClient) { }
 
-  ngOnInit(): void {
+  ngOnInit(){
+    const url ='assets/data.json';
+    this.httpClient.get(url).subscribe((res)=>{
+     this.dataList = res;
+   })
   }
+
+  dataList: any =[];
 
   show: boolean = false;
 
@@ -74,6 +81,10 @@ export class DropdownComponent implements OnInit {
     else {
       this.show = false;
     }
+    this.httpClient.get('assets/data.json').subscribe((res)=>{
+     this.dataList = res
+     console.log(this.dataList)
+    });
   }
 
 }

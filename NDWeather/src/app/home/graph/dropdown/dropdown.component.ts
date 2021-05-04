@@ -17,7 +17,7 @@ export class DropdownComponent implements OnInit {
    })
   }
 
-  dataList: any =[];
+  dataList: any = [];
 
   show: boolean = false;
 
