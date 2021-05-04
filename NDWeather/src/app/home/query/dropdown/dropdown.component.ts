@@ -15,7 +15,7 @@ export class DropdownComponent implements OnInit {
     this.fetchData();
   }
 
-  blah: string = 'blah';
+  blah: string = 'bla';
   dataList: Weather[] = [];
   
   // toggle for the data to display
