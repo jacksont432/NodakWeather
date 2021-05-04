@@ -13,8 +13,7 @@ export class DropdownComponent implements OnInit {
   ngOnInit(){
     const url ='assets/data.json';
     this.httpClient.get(url).subscribe((res)=>{
-     this.dataList = res
-     console.log(this.dataList)
+     this.dataList = res;
    })
   }
 
@@ -83,9 +82,6 @@ export class DropdownComponent implements OnInit {
     this.httpClient.get('assets/data.json').subscribe((res)=>{
      this.dataList = res
      console.log(this.dataList)
-    })
-    this.dataList.forEach((element: any) => {
-      console.log(element);
     });
   }
   
