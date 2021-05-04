@@ -1,5 +1,4 @@
-
-interface Weather {
+export interface Weather {
     index: number;
     station: string;
     name: string;
