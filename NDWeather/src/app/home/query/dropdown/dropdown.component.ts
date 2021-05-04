@@ -1,6 +1,6 @@
 import { Component, OnInit } from '@angular/core';
-import { FormControl } from '@angular/forms';
-
+import { DataService } from '../../../data.service';
+import { Weather } from '../../../weather';
 
 @Component({
   selector: 'app-dropdown',
@@ -9,22 +9,40 @@ import { FormControl } from '@angular/forms';
 })
 export class DropdownComponent implements OnInit {
 
-  constructor() { }
+  constructor(private service: DataService) { }
 
-  ngOnInit(): void {
+  ngOnInit() {
+    this.fetchData();
   }
 
+  blah: string = 'bla';
+  dataList: Weather[] = [];
+  
+  // toggle for the data to display
   show: boolean = false;
-
+  // the chosen station and weather type
+  station: string = "";
+  weather: string = "";
+  // the corresponding chosen station and weather to query
+  selectedStation: string = '';  
+  selectedWeather: string = '';
+  // the list of weather to display
   displayWeatherList: string [] = [
-    "Date",
     "Precipitation",
     "Snowfall",
     "Temperature Average",
     "Temperature Max",
     "Temperature Min"
   ]
-
+  // the corresponding weather options in the json file
+  weatherList: string[] = [
+    "PRCP",
+    "SNOW",
+    "TAVG",
+    "TMAX",
+    "TMIN"
+  ]
+  // the list of stations to display
   displayStationList: string [] = [
     "Fargo",
     "Jamestown",
@@ -34,10 +52,7 @@ export class DropdownComponent implements OnInit {
     "Minot",
     "Dickinson"
   ]
-
-  station: string = "";
-  weather: string = "";
-
+  // the list of stations in the json file
   stationList: string[] = [
     "FARGO HECTOR INTERNATIONAL AIRPORT, ND US",
     "JAMESTOWN STATE HOSPITAL, ND US",
@@ -47,20 +62,6 @@ export class DropdownComponent implements OnInit {
     "MINOT EXPERIMENTAL STATION, ND US",
     "DICKINSON RANCH HQ, ND US"
   ]
-
-  weatherList: string[] = [
-    "DATE",
-    "PRCP",
-    "SNOW",
-    "TAVG",
-    "TMAX",
-    "TMIN"
-  ]
-
-  selectedStation: string = '';
-  
-  selectedWeather: string = '';
-
 
   select() {
     this.selectedStation = this.station;
@@ -74,6 +75,13 @@ export class DropdownComponent implements OnInit {
     else {
       this.show = false;
     }
+  }
+
+  fetchData() {
+    console.log(this.service.getWeatherData().subscribe(
+      data => this.dataList = data
+    ));
+    
   }
 
 }
