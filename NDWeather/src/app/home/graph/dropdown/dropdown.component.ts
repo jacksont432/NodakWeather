@@ -10,12 +10,10 @@ export class DropdownComponent implements OnInit {
 
   constructor(private httpClient: HttpClient) { }
 
-  ngOnInit(): void {
-    this.httpClient.get('assets/data.json').subscribe(
-      data => (data.hasOwnProperty(this.weather) && data.hasOwnProperty(this.station)))
-      {
-        this.dataList = 
-      }
+  ngOnInit(){
+    this.httpClient.get("assets/data.json").subscribe(data =>{      
+      this.dataList = data;
+    })
   }
 
   dataList: any =[];
