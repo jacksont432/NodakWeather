@@ -1,10 +1,7 @@
 import { Component, OnInit } from '@angular/core';
-<<<<<<< HEAD
 import {ChartsModule} from 'ng2-charts';
-=======
 import { Data } from '../../weather';
 import { DataService } from '../../data.service';
->>>>>>> e08de97cb91a7e1d1e258f0a56d1f5b3a435ee8f
 
 @Component({
   selector: 'app-graph',
@@ -13,7 +10,6 @@ import { DataService } from '../../data.service';
 })
 export class GraphComponent implements OnInit {
 
-<<<<<<< HEAD
   chartData = [
     {
       data: [330, 600, 260, 700],
@@ -40,10 +36,7 @@ export class GraphComponent implements OnInit {
     responsive: true
   };
 
-  constructor() { }
-=======
   constructor(private service: DataService) { }
->>>>>>> e08de97cb91a7e1d1e258f0a56d1f5b3a435ee8f
 
   ngOnInit(): void {
   }
