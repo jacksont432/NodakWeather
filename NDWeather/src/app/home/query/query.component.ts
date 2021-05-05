@@ -16,10 +16,10 @@ export class QueryComponent implements OnInit {
 
   dataList: Data[] = [];
 
-  station: string = '';
-  weather: string = '';
+  station: string = '____';
+  weather: string = '____';
   location: number = -1;
-  display: string = '';
+  display: string = '____';
 
   weatherTypes: string [] = [
     'Precipitation',

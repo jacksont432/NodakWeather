@@ -1,26 +1,27 @@
-<div class="graph-card-holder">
-    <mat-card class="graph-card">
+<div class="query-card-holder">
+    <mat-card class="query-card">
       <mat-card-content>
         <p>
           Input the county you want to view the selected weather type, then click submit and your weather data will be out shortly!!
         </p>
-        <app-dropdown (emitter)=select($event)></app-dropdown>
+        <app-dropdown (emitter)=select($event)></app-dropdown><br><br>
+        <p>
+          {{ display }} data for {{ station }} weather station
+        </p><br><br>
+        <div class = "data-table-holder">
+          <table class = "data-table">    
+            <tr>
+              <th>Date</th>
+              <th>{{ display }}</th>
+            </tr>
+            <tr *ngFor='let data of dataList'>
+              <th>{{ data.name }}</th>
+              <th>{{ data.value }}</th>
+            </tr>
+          </table>
+        </div>
       </mat-card-content>
     </mat-card>
   </div>
-<div>
-  <table>
-    {{ display }} data for {{ station }} weather station
-    <tr>
-      <th>Date</th>
-      <th>{{ display }}</th>
-    </tr>
-    <tr *ngFor='let data of dataList'>
-      <th>{{ data.name }}</th>
-      <th>{{ data.value }}</th>
-    </tr>
-  </table>
-  </div>
-
 
   
