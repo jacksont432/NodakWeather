@@ -3,6 +3,7 @@ import { BrowserModule } from '@angular/platform-browser';
 import { FormsModule } from '@angular/forms';
 import { MatFormFieldModule } from '@angular/material/form-field';
 import { MatSelectModule } from '@angular/material/select';
+import {MatTableModule} from '@angular/material/table';
 
 import { AppComponent } from './app.component';
 import { HomeComponent } from './home/home.component';
@@ -15,7 +16,7 @@ import { DropdownComponent } from './home/query/dropdown/dropdown.component';
 
 
 @NgModule({
-  imports:      [ BrowserModule, FormsModule, MatCardModule, BrowserAnimationsModule, MatFormFieldModule, MatSelectModule   ],
+  imports:      [ BrowserModule, FormsModule, MatCardModule, BrowserAnimationsModule, MatFormFieldModule, MatSelectModule, MatTableModule   ],
   declarations: [ AppComponent, HomeComponent, HomeDetailsComponent, GraphComponent, QueryComponent, DropdownComponent ],
   bootstrap:    [ AppComponent ]
 })
