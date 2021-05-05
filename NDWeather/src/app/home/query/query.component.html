@@ -10,13 +10,13 @@
         </p><br><br>
         <div class = "data-table-holder">
           <table class = "data-table">    
-            <tr>
-              <th>Date</th>
-              <th>{{ display }}</th>
-            </tr>
-            <tr *ngFor='let data of dataList'>
-              <th>{{ data.name }}</th>
-              <th>{{ data.value }}</th>
+            <tr class = "data-table-titles">
+              <th class = "data-table-title">Date</th>
+              <th class = "data-table-title">{{ display }}</th>
+            </tr><br>
+            <tr class = "data-table-contents" *ngFor='let data of dataList'>
+              <th class = "data-table-content">{{ data.name }}</th>
+              <th class = "data-table-content">{{ data.value }}</th>
             </tr>
           </table>
         </div>

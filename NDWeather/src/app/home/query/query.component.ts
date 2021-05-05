@@ -11,8 +11,7 @@ export class QueryComponent implements OnInit {
 
   constructor(private service: DataService) { }
 
-  ngOnInit(): void {
-  }
+  ngOnInit(): void {}
 
   dataList: Data[] = [];
 
@@ -33,7 +32,6 @@ export class QueryComponent implements OnInit {
     this.display = this.weatherTypes[this.location - 1];
   }
 
-
   select(vals: string[]) {
     this.weather = vals[0];
     this.station = vals[1];
@@ -41,7 +39,6 @@ export class QueryComponent implements OnInit {
     this.submit();
     this.displayOption();
   }
-
 
   submit() {
     this.dataList = this.service.getData(this.station, this.weather);
