@@ -1,7 +1,4 @@
 import { Injectable } from '@angular/core';
-import { HttpClient } from "@angular/common/http";
-import { pipe } from "rxjs";
-import { map } from "rxjs/operators";
 import { Weather } from './weather';
 
 @Injectable({
@@ -9,23 +6,12 @@ import { Weather } from './weather';
 })
 export class DataService {
 
-  blah: string = 'blah';
   WEATHER: Weather[] =[];
 
-  constructor(private http: HttpClient) { }
+  constructor() { }
 
   getWeatherData() {
-    return this.http
-    .get<Weather[]>(
-      "https://nodakweather-default-rtdb.firebaseio.com/WEATHER"
-    )
-    .pipe(
-      map(data => {
-        let weatherArray: Weather[] = [];
-        for(let key in data) weatherArray.push(data[key]);
-        return weatherArray;
-      })
-    );
+    
   }
 
 }

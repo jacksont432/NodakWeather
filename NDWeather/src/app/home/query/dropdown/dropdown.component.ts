@@ -12,10 +12,8 @@ export class DropdownComponent implements OnInit {
   constructor(private service: DataService) { }
 
   ngOnInit() {
-    this.fetchData();
   }
 
-  blah: string = 'bla';
   dataList: Weather[] = [];
   
   // toggle for the data to display
@@ -75,13 +73,6 @@ export class DropdownComponent implements OnInit {
     else {
       this.show = false;
     }
-  }
-
-  fetchData() {
-    console.log(this.service.getWeatherData().subscribe(
-      data => this.dataList = data
-    ));
-    
   }
 
 }
