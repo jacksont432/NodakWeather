@@ -1,27 +1,18 @@
 <mat-form-field class="dropdown" appearance="fill">
     <mat-label>Weather Station</mat-label>
-    <mat-select [(ngModel)]="selectedStation" (change)=select()>
-      <mat-option *ngFor="let station of stationList; let i = index" [value]="station" >{{ displayStationList[i] }}</mat-option>
+    <mat-select [(ngModel)]="station">
+      <mat-option *ngFor="let station of displayStationList; let i = index" [value]="station" >{{ displayStationList[i] }}</mat-option>
     </mat-select>
 </mat-form-field>
 
 <mat-form-field class="dropdown" appearance="fill">
   <mat-label>Weather Type</mat-label>
-  <mat-select [(ngModel)]="selectedWeather" (change)=select()>
+  <mat-select [(ngModel)]="weather" >
     <mat-option *ngFor="let weather of weatherList; let i = index" [value]="weather" >{{ displayWeatherList[i] }}</mat-option>
   </mat-select>
 </mat-form-field>
 
-<button class="button" (click)="submit()">
-  Submit
-</button>
+<button id='button' (click)='Submit()'>Submit</button>
 
-<div *ngIf = "show">
-  <p>
-  {{ selectedStation }}
-</p>
-<p>
-  {{ selectedWeather }}
-</p>
-</div>
+
 

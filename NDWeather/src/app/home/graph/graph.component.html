@@ -9,6 +9,7 @@
     </mat-card-content>
   </mat-card>
 </div>
+<<<<<<< HEAD
 <div>
   <div style="width: 40%;">
     <canvas
@@ -23,3 +24,19 @@
     </canvas>
   </div>
 </div>
+=======
+
+<div>
+  <table>
+    {{ display }} data for {{ station }} weather station
+    <tr>
+      <th>Date</th>
+      <th>{{ display }}</th>
+    </tr>
+    <tr *ngFor='let data of dataList'>
+      <th>{{ data.name }}</th>
+      <th>{{ data.value }}</th>
+    </tr>
+  </table>
+  </div>
+>>>>>>> e08de97cb91a7e1d1e258f0a56d1f5b3a435ee8f

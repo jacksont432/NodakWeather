@@ -1,6 +1,5 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, Output, EventEmitter } from '@angular/core';
 import { DataService } from '../../../data.service';
-import { Weather } from '../../../weather';
 
 @Component({
   selector: 'app-dropdown',
@@ -14,16 +13,15 @@ export class DropdownComponent implements OnInit {
   ngOnInit() {
   }
 
-  dataList: Weather[] = [];
-  
-  // toggle for the data to display
-  show: boolean = false;
   // the chosen station and weather type
   station: string = "";
   weather: string = "";
+  location: string = "";
+
+  choice: string [] = [];
   // the corresponding chosen station and weather to query
-  selectedStation: string = '';  
-  selectedWeather: string = '';
+  @Output()
+  emitter: EventEmitter<string [] > = new EventEmitter<string []>();
   // the list of weather to display
   displayWeatherList: string [] = [
     "Precipitation",
@@ -50,29 +48,31 @@ export class DropdownComponent implements OnInit {
     "Minot",
     "Dickinson"
   ]
-  // the list of stations in the json file
-  stationList: string[] = [
-    "FARGO HECTOR INTERNATIONAL AIRPORT, ND US",
-    "JAMESTOWN STATE HOSPITAL, ND US",
-    "GRAND FORKS INTERNATIONAL AIRPORT, ND US",
-    "WILLISTON EXPERIMENTAL FARM, ND US",
-    "BISMARCK MUNICIPAL AIRPORT, ND US",
-    "MINOT EXPERIMENTAL STATION, ND US",
-    "DICKINSON RANCH HQ, ND US"
-  ]
 
-  select() {
-    this.selectedStation = this.station;
-    this.selectedWeather = this.weather;
+  findLocation() {
+    if(this.weather == "PRCP") {
+      this.location = '1';
+    }
+    else if(this.weather == "SNOW") {
+      this.location = '2';
+    }
+    else if(this.weather == "TAVG") {
+      this.location = '3';
+    }
+    else if(this.weather == "TMAX") {
+      this.location = '4';
+    }
+    else if(this.weather == "TMIN") {
+      this.location = '5';
+    }
   }
 
-  submit() {
-    if(this.selectedStation != '' && this.selectedWeather != '') {
-      this.show = true;
-    }
-    else {
-      this.show = false;
-    }
+  Submit() {
+    this.findLocation();
+    this.choice[0] = this.weather;
+    this.choice[1] = this.station;
+    this.choice[2] = this.location;
+    this.emitter.emit(this.choice);
   }
 
 }
