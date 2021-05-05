@@ -1,8 +1,8 @@
 export interface Weather {
   DATE: string;
-  PRCP: number;
-  SNOW: number;
-  TAVG: number;
-  TMAX: number;
-  TMIN: number;
+  PRCP: number|null;
+  SNOW: number|null;
+  TAVG: number|null;
+  TMAX: number|null;
+  TMIN: number|null;
 }
