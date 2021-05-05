@@ -1,0 +1,6 @@
+{
+  "dependencies": {
+    "@swimlane/ngx-charts": "^17.0.1",
+    "ngx-bootstrap": "^6.2.0"
+  }
+}
