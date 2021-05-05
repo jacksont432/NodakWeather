@@ -8,3 +8,17 @@
     </mat-card-content>
   </mat-card>
 </div>
+
+<div>
+  <table>
+    {{ display }} data for {{ station }} weather station
+    <tr>
+      <th>Date</th>
+      <th>{{ display }}</th>
+    </tr>
+    <tr *ngFor='let data of dataList'>
+      <th>{{ data.name }}</th>
+      <th>{{ data.value }}</th>
+    </tr>
+  </table>
+  </div>

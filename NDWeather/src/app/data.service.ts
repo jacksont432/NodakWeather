@@ -12,6 +12,8 @@ export class DataService {
 
   output: Data[] = [];
 
+  types: string[] =[];
+
   dataInstance: Data | undefined;
 
   constructor() { }
@@ -71,6 +73,16 @@ export class DataService {
     this.getStationData(station);
     this.trimData(weatherType);
     return this.output;
+  }
+
+  getInput() {
+    return this.types;
+  }
+
+  pushInput(weather: string, station: string, location: string) {
+    this.types[0] = weather;
+    this.types[1] = station;
+    this.types[2] = location;
   }
 
 }
