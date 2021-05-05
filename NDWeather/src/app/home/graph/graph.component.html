@@ -5,6 +5,21 @@
         Input the county you want to view the selected weather type, then click submit and your weather data will be out shortly!!
       </p>
       <app-dropdown></app-dropdown>
+      
     </mat-card-content>
   </mat-card>
+</div>
+<div>
+  <div style="width: 40%;">
+    <canvas
+      baseChart
+      [chartType]="'line'"
+      [legend]="true"
+      [datasets]="chartData"
+      [labels]="chartLabels"
+      [options]="chartOptions"
+
+    >
+    </canvas>
+  </div>
 </div>

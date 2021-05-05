@@ -12,10 +12,11 @@ import { GraphComponent } from './home/graph/graph.component';
 import { QueryComponent } from './home/query/query.component';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { DropdownComponent } from './home/query/dropdown/dropdown.component';
+import { ChartsModule } from 'ng2-charts';
 
 
 @NgModule({
-  imports:      [ BrowserModule, FormsModule, MatCardModule, BrowserAnimationsModule, MatFormFieldModule, MatSelectModule   ],
+  imports:      [ BrowserModule, FormsModule, MatCardModule, BrowserAnimationsModule, MatFormFieldModule, MatSelectModule, ChartsModule ],
   declarations: [ AppComponent, HomeComponent, HomeDetailsComponent, GraphComponent, QueryComponent, DropdownComponent ],
   bootstrap:    [ AppComponent ]
 })
