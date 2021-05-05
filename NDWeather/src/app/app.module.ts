@@ -17,11 +17,7 @@ import { ChartsModule } from 'ng2-charts';
 
 
 @NgModule({
-<<<<<<< HEAD
-  imports:      [ BrowserModule, FormsModule, MatCardModule, BrowserAnimationsModule, MatFormFieldModule, MatSelectModule, ChartsModule ],
-=======
-  imports:      [ BrowserModule, FormsModule, MatCardModule, BrowserAnimationsModule, MatFormFieldModule, MatSelectModule, MatTableModule   ],
->>>>>>> e08de97cb91a7e1d1e258f0a56d1f5b3a435ee8f
+  imports:      [ BrowserModule, FormsModule, MatCardModule, BrowserAnimationsModule, MatFormFieldModule, MatSelectModule, MatTableModule , ChartsModule  ],
   declarations: [ AppComponent, HomeComponent, HomeDetailsComponent, GraphComponent, QueryComponent, DropdownComponent ],
   bootstrap:    [ AppComponent ]
 })
