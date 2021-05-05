@@ -16244,7 +16244,7 @@ export const dickinsonData: Weather[] = [
     TMIN: 29.0}
 ]
 
-export const JamestownData: Weather[] = [
+export const jamestownData: Weather[] = [
     {DATE: '2020-01-01',
     PRCP: 0.0,
     SNOW: 0.0,

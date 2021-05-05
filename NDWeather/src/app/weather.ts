@@ -6,3 +6,8 @@ export interface Weather {
   TMAX: number|null;
   TMIN: number|null;
 }
+
+export interface Data {
+  name: string;
+  value: number | null;
+}
