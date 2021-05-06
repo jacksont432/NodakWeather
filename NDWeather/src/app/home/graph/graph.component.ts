@@ -3,6 +3,11 @@ import {ChartsModule} from 'ng2-charts';
 import { Data } from '../../weather';
 import { DataService } from '../../data.service';
 
+interface chartData {
+  data: number [];
+  label: string
+}
+
 @Component({
   selector: 'app-graph',
   templateUrl: './graph.component.html',
@@ -10,19 +15,9 @@ import { DataService } from '../../data.service';
 })
 export class GraphComponent implements OnInit {
 
-  chartData = [
-    {
-      data: [330, 600, 260, 700],
-      label: 'Account A'
-    }
-  ];
+  plotData: chartData [] = [];
 
-  chartLabels = [
-    'January',
-    'February',
-    'March',
-    'April'
-  ];
+  chartLabels: string [] = [];
 
   chartOptions = {
     responsive: true
@@ -36,10 +31,10 @@ export class GraphComponent implements OnInit {
 
   dataList: Data[] = [];
 
-  station: string = '____';
-  weather: string = '____';
+  station: string = '';
+  weather: string = '';
   location: number = -1;
-  display: string = '____';
+  display: string = '';
 
   weatherTypes: string [] = [
     'Precipitation',
@@ -63,6 +58,23 @@ export class GraphComponent implements OnInit {
 
   submit() {
     this.dataList = this.service.getData(this.station, this.weather);
+    this.load();
+  }
+
+  load() {
+    this.chartLabels = [];
+    this.plotData[0].label = this.station;
+    for(var i = 0; i < this.dataList.length; i++) {
+      var num = this.dataList[i].value;
+      var time = this.dataList[i].name;
+      if(num == null) {
+        continue;
+      }
+      else {
+        this.plotData[0].data[i] = num;
+      }
+      this.chartLabels.push(time);
+    }
   }
 
  

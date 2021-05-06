@@ -10,35 +10,16 @@
   </mat-card>
 </div>
 <div>
-  <p>
-    Station: {{ station }}
-    Weather: {{ weather }}
-  </p>
-</div>
-<div>
   <div style="width: 40%;">
     <canvas
       baseChart
       [chartType]="'line'"
       [legend]="true"
-      [datasets]="chartData"
+      [datasets]="plotData"
       [labels]="chartLabels"
       [options]="chartOptions"
 
     >
     </canvas>
   </div>
-</div>
-<div>
-  <table>
-    {{ display }} data for {{ station }} weather station
-    <tr>
-      <th>Date</th>
-      <th>{{ display }}</th>
-    </tr>
-    <tr *ngFor='let data of dataList'>
-      <th>{{ data.name }}</th>
-      <th>{{ data.value }}</th>
-    </tr>
-  </table>
 </div>
