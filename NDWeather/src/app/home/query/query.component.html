@@ -5,9 +5,7 @@
           Input the county you want to view the selected weather type, then click submit and your weather data will be out shortly!!
         </p>
         <app-dropdown (emitter)=select($event)></app-dropdown><br><br>
-        <p *ngIf='show()'>
-          {{ display }} data for {{ station }} weather station
-        </p><br><br>
+        <br><br>
         <div class = "data-table-holder" *ngIf='show()'>
           <table class = "data-table">    
             <tr class = "data-table-titles">
