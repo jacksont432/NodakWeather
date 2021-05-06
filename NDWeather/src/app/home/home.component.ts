@@ -1,4 +1,3 @@
-
 import { Component, OnInit } from '@angular/core';
 
 @Component({
@@ -11,6 +10,7 @@ export class HomeComponent implements OnInit {
   home: boolean = true;
   query: boolean = false;
   graph: boolean = false;
+  
 
   homeClick(): void {
     this.home = !this.home;

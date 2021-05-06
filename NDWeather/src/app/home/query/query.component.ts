@@ -13,6 +13,8 @@ export class QueryComponent implements OnInit {
 
   ngOnInit(): void {}
 
+  choice: string [] = [];
+
   dataList: Data[] = [];
 
   station: string = '____';

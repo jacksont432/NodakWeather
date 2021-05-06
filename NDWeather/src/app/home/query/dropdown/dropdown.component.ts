@@ -73,6 +73,7 @@ export class DropdownComponent implements OnInit {
     this.choice[1] = this.station;
     this.choice[2] = this.location;
     this.emitter.emit(this.choice);
+    this.service.pushInput(this.weather, this.station, this.location);
   }
 
 }

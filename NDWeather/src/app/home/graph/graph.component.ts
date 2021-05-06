@@ -60,16 +60,20 @@ export class GraphComponent implements OnInit {
     this.weather = this.temp[0];
     this.station = this.temp[1];
     this.location = parseInt(this.temp[2]);
-    this.submit();
     this.displayOption();
+    this.dataList = this.service.getData(this.station, this.weather);
   }
 
 
-  submit() {
-    this.dataList = this.service.getData(this.station, this.weather);
+  submit(vals: string[]) {
+    this.select();
 
-    this.chartData = this.service.getData(this.station, this.weather) as any ;	 // FILL THE CHART ARRAY WITH DATA.
+    //this.chartData = this.service.getData(this.station, this.weather) as any ;	 // FILL THE CHART ARRAY WITH DATA.
   
+  }
+
+  test() {
+    this.select();
   }
 
 }
