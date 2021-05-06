@@ -7,28 +7,31 @@
       <app-dropdown-graph (emitter)=select($event)></app-dropdown-graph>
       
     </mat-card-content>
+    <div>
+      <div style="width: 100%;">
+        <canvas
+          baseChart
+          [chartType]="'line'"
+          [legend]="true"
+          [datasets]="chartData"
+          [labels]="chartLabels"
+          [options]="chartOptions"
+    
+        >
+        </canvas>
+      </div>
+    </div>
   </mat-card>
 </div>
+
+
 <div>
   <p>
     Station: {{ station }}
     Weather: {{ weather }}
   </p>
 </div>
-<div>
-  <div style="width: 40%;">
-    <canvas
-      baseChart
-      [chartType]="'line'"
-      [legend]="true"
-      [datasets]="chartData"
-      [labels]="chartLabels"
-      [options]="chartOptions"
 
-    >
-    </canvas>
-  </div>
-</div>
 <div>
   <table>
     {{ display }} data for {{ station }} weather station
