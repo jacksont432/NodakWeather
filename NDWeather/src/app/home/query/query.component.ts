@@ -17,10 +17,17 @@ export class QueryComponent implements OnInit {
 
   dataList: Data[] = [];
 
-  station: string = '____';
-  weather: string = '____';
+  station: string = '';
+  weather: string = '';
   location: number = -1;
-  display: string = '____';
+  display: string = '';
+
+  show(): boolean {
+    if(this.station == '' && this.weather == '') {
+      return false;
+    }
+    return true;
+  }
 
   weatherTypes: string [] = [
     'Precipitation',

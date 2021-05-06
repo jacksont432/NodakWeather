@@ -30,17 +30,16 @@ export class GraphComponent implements OnInit {
 
   constructor(private service: DataService) { }
 
-  ngOnInit(): void {
-  }
+  ngOnInit(): void {}
+
+  choice: string [] = [];
 
   dataList: Data[] = [];
 
-  station: string = '';
-  weather: string = '';
+  station: string = '____';
+  weather: string = '____';
   location: number = -1;
-  display: string = '';
-
-  temp: string[] = [];
+  display: string = '____';
 
   weatherTypes: string [] = [
     'Precipitation',
@@ -54,26 +53,18 @@ export class GraphComponent implements OnInit {
     this.display = this.weatherTypes[this.location - 1];
   }
 
-
-  select() {
-    this.temp = this.service.getInput();
-    this.weather = this.temp[0];
-    this.station = this.temp[1];
-    this.location = parseInt(this.temp[2]);
+  select(vals: string[]) {
+    this.weather = vals[0];
+    this.station = vals[1];
+    this.location = parseInt(vals[2]);
+    this.submit();
     this.displayOption();
+  }
+
+  submit() {
     this.dataList = this.service.getData(this.station, this.weather);
   }
 
-
-  submit(vals: string[]) {
-    this.select();
-
-    //this.chartData = this.service.getData(this.station, this.weather) as any ;	 // FILL THE CHART ARRAY WITH DATA.
-  
-  }
-
-  test() {
-    this.select();
-  }
+ 
 
 }

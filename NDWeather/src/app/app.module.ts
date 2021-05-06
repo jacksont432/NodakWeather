@@ -15,11 +15,12 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { DropdownComponent } from './home/query/dropdown/dropdown.component';
 import { ChartsModule } from 'ng2-charts';
 import { ScrollToTopComponent } from './scroll-to-top/scroll-to-top.component';
+import { DropdownGraphComponent } from './home/graph/dropdown-graph/dropdown-graph.component';
 
 
 @NgModule({
   imports:      [ BrowserModule, FormsModule, MatCardModule, BrowserAnimationsModule, MatFormFieldModule, MatSelectModule, MatTableModule , ChartsModule  ],
-  declarations: [ AppComponent, HomeComponent, HomeDetailsComponent, GraphComponent, QueryComponent, DropdownComponent, ScrollToTopComponent ],
+  declarations: [ AppComponent, HomeComponent, HomeDetailsComponent, GraphComponent, QueryComponent, DropdownComponent, ScrollToTopComponent, DropdownGraphComponent ],
   bootstrap:    [ AppComponent ]
 })
 export class AppModule { }

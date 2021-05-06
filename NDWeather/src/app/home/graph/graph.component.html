@@ -4,7 +4,7 @@
       <p>
         Input the county you want to view the selected weather type, then click submit and your weather data will be out shortly!!
       </p>
-      <app-dropdown (emitter)=submit($event)></app-dropdown>
+      <app-dropdown-graph (emitter)=select($event)></app-dropdown-graph>
       
     </mat-card-content>
   </mat-card>
@@ -29,7 +29,6 @@
     </canvas>
   </div>
 </div>
-<button (click)="test()">TestyTest</button>
 <div>
   <table>
     {{ display }} data for {{ station }} weather station
